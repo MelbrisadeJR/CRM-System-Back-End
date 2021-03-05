@@ -3,7 +3,7 @@ CREATE TABLE order
 (
     adjustment_price numeric NOT NULL,
     discount numeric NOT NULL,
-    order_id integer NOT NULL DEFAULT nextval('order_order_id_seq'::regclass),
+    order_id integer NOT NULL 
     promotion numeric NOT NULL,
     purchase_date date NOT NULL,
     purchase_number bigint NOT NULL,

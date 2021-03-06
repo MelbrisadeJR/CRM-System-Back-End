@@ -23,5 +23,5 @@ DROP CONSTRAINT IF EXISTS feedback_fk3;
 ALTER TABLE feedback
 ADD CONSTRAINT feedback_fk3
 FOREIGN KEY (product_id) 
-REFERENCES orders (product_id)
+REFERENCES product (product_id)
 ON DELETE CASCADE;

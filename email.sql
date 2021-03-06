@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS email CASCADE;
 CREATE TABLE IF NOT EXISTS email (
-    id BIGINT,
+    email_id BIGINT,
     subject VARCHAR(255),
     template SMALLINT,
     status SMALLINT,
@@ -8,19 +8,19 @@ CREATE TABLE IF NOT EXISTS email (
     content TEXT,
     recipient VARCHAR(255),
     sent_time TIMESTAMP NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (email_id)
     );
 
 DROP TABLE IF EXISTS status CASCADE;
 CREATE TABLE IF NOT EXISTS status (
-    id SMALLINT,
+    status_id SMALLINT,
     type VARCHAR(255),
-    PRIMARY KEY (id)
+    PRIMARY KEY (status_id)
     );
 
 DROP TABLE IF EXISTS template CASCADE;
 CREATE TABLE IF NOT EXISTS template (
-    id SMALLINT,
+    template_id SMALLINT,
     type VARCHAR(255),
-    PRIMARY KEY (id)
+    PRIMARY KEY (template_id)
     );

@@ -25,4 +25,3 @@ ADD CONSTRAINT feedback_fk3
 FOREIGN KEY (product_id) 
 REFERENCES orders (product_id)
 ON DELETE CASCADE;
--- By Lily

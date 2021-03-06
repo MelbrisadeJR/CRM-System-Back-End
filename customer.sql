@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS Customer CASCADE;
-CREATE TABLE Customer(
+DROP TABLE IF EXISTS customer CASCADE;
+CREATE TABLE customer(
 	customer_id SERIAL,
 	first_name VARCHAR(255) NOT NULL,
 	last_name VARCHAR(255) NOT NULL,
@@ -17,15 +17,15 @@ CREATE TABLE Customer(
     PRIMARY KEY(customer_id)
 );
 
-DROP TABLE IF EXISTS Gender CASCADE;
-CREATE TABLE IF NOT EXISTS "template" (
+DROP TABLE IF EXISTS gender CASCADE;
+CREATE TABLE IF NOT EXISTS gender (
     gender_id SMALLINT,
     gender_type VARCHAR(255) NOT NULL,
     PRIMARY KEY ("gender_id")
     );
 
-DROP TABLE IF EXISTS Tag CASCADE;
-CREATE TABLE IF NOT EXISTS "template" (
+DROP TABLE IF EXISTS tag CASCADE;
+CREATE TABLE IF NOT EXISTS tag (
     tag_id SMALLINT,
     tag_type VARCHAR(255) NOT NULL,
     PRIMARY KEY ("tag_id")

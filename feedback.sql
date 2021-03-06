@@ -8,7 +8,7 @@ CREATE TABLE feedback(
    product_id INT,
    create_on TIMESTAMP,
    last_process TIMESTAMP,
-   discription VARCHAR(255) NOT NULL,
+   description VARCHAR(255) NOT NULL,
    process_status FEEDBACK_STATUS,
    PRIMARY KEY(feedback_id)
 );

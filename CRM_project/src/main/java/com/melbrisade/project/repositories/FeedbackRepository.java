@@ -1,4 +1,4 @@
 package com.melbrisade.project.repositories;
 
-public class DemoRepository {
+public interface FeedbackRepository {
 }

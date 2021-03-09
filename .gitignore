@@ -21,3 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+CRM_project/src/main/java/com/melbrisade/project/entities/Admin.java
+CRM_project/src/main/java/com/melbrisade/project/entities/Email.java
+CRM_project/src/main/java/com/melbrisade/project/entities/Order.java
+CRM_project/src/main/java/com/melbrisade/project/repositories/AdminRepository.java

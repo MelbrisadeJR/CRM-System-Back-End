@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS product CASCADE;
 CREATE TABLE product (
-	product_id INT,
+	product_id INT NOT NULL,
 	product_name VARCHAR(255),
-	stock INT,
+	stock INT NOT NULL,
 	Discounts REAL,
-	SKU INT,
+	SKU INT NOT NULL,
 	product_price REAL,
 	product_cost REAL,
 	category VARCHAR(255),

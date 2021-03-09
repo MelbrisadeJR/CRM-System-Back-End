@@ -1,5 +1,7 @@
 package com.melbrisade.project.entities;
 
+import javax.persistence.*;
+
 @Entity
 @Table(name = "admin"）
 public class Admin {

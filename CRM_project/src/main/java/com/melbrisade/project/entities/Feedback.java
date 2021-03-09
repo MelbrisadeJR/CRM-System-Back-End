@@ -1,6 +1,8 @@
 package com.melbrisade.project.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
@@ -15,17 +17,19 @@ public class Feedback {
     @Column(updatable = false)
     private String feedbackSequence;
 
-    @NotBlank()
+    @NotBlank(message = "Description Required")
     private String description;
     private String feedback_status;
-    private String priority;
+    private Integer priority;
 
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date create_At;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date update_At;
 
-    // Map Customer
-    // Map Order
-    // Map Product
+    // Map Customer Required
+    // Map Order Required
+    // Map Product Required
 
     public Feedback() {
     }
@@ -85,11 +89,11 @@ public class Feedback {
         this.feedback_status = feedback_status;
     }
 
-    public String getPriority() {
+    public Integer getPriority() {
         return priority;
     }
 
-    public void setPriority(String priority) {
+    public void setPriority(Integer priority) {
         this.priority = priority;
     }
 

@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS orders CASCADE;
-CREATE TABLE orders
+CREATE TABLE order
 (
     adjustment_price numeric NOT NULL,
     discount numeric NOT NULL,
@@ -11,4 +11,5 @@ CREATE TABLE orders
     total_price numeric NOT NULL,
     "GST" numeric NOT NULL,
     PRIMARY KEY (order_id)
+    FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
 )

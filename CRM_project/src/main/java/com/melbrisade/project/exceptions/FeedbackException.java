@@ -1,4 +1,4 @@
 package com.melbrisade.project.exceptions;
 
-public class FeekbackException {
+public class FeedbackException {
 }

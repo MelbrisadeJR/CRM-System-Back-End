@@ -1,4 +1,7 @@
 package com.melbrisade.project.repositories;
 
-public interface FeedbackRepository {
+import com.melbrisade.project.entities.Feedback;
+import org.springframework.data.repository.CrudRepository;
+
+public interface FeedbackRepository extends CrudRepository<Feedback, Long> {
 }

@@ -1,6 +1,8 @@
 package com.melbrisade.project.entities;
 
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -13,6 +15,7 @@ public class Feedback {
     @Column(updatable = false)
     private String feedbackSequence;
 
+    @NotBlank()
     private String description;
     private String feedback_status;
     private String priority;

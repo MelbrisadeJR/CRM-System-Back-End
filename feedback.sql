@@ -9,6 +9,6 @@ CREATE TABLE feedback(
    create_At TIMESTAMP,
    update_At TIMESTAMP,
    description VARCHAR(255) NOT NULL,
-   process_status FEEDBACK_STATUS,
+   feedback_status FEEDBACK_STATUS,
    PRIMARY KEY(feedback_id)
 );

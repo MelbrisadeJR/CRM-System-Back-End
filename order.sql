@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS orders CASCADE;
-CREATE TABLE orders
+CREATE TABLE order
 (
     adjustment_price numeric NOT NULL,
     discount numeric NOT NULL,

@@ -6,8 +6,8 @@ CREATE TABLE feedback(
    customer_id INT,
    order_id INT,
    product_id INT,
-   create_on TIMESTAMP,
-   last_process TIMESTAMP,
+   create_At TIMESTAMP,
+   update_At TIMESTAMP,
    description VARCHAR(255) NOT NULL,
    process_status FEEDBACK_STATUS,
    PRIMARY KEY(feedback_id)

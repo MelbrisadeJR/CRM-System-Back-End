@@ -10,7 +10,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@Table(name="order")
+@Table(name="customer_order")
 public class Order {
     @Column(name = "adjustment_price")
     private String adjustment_price;

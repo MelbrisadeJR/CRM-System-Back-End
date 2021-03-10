@@ -1,8 +1,9 @@
 package com.melbrisade.project.entities;
 
-import javax.persistence.*;
-
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Admin {
@@ -11,44 +12,41 @@ public class Admin {
     @GeneratedValue
     private Long admin_id;
 
-    @Column(name = firstName, nullable = false)
+    @Column(name = "firstName", nullable = false)
     private String firstName;
 
-    @Column(name = lastName, nullable = false)
+    @Column(name = "lastName", nullable = false)
     private String lastName;
 
-    @Column(name = passWord, nullable = false)
+    @Column(name = "passWord", nullable = false)
     private String passWord;
     
-    @Column(name = avatar, nullable = true)
+    @Column(name = "avatar", nullable = true)
     private byte avatar;
 
-    @Column(name = avatar, nullable = true)
-    private byte avatar;
+    @Column(name = "phoneNumCountryCode", nullable = true)
+    private int phoneNumCountryCode;
 
-    @Column(name = phoneNumCountryCode, nullable = true)
-    private Int phoneNumCountryCod;
+    @Column(name = "phoneNum", nullable = false, unique = true)
+    private int phoneNum;
 
-    @Column(name = phoneNum, nullable = false, unique = true)
-    private Int phoneNum;
+    @Column(name = "trustedPhone", nullable = false)
+    private int trustedPhone;
 
-    @Column(name = trustedPhone, nullable = false)
-    private Int trustedPhone;
-
-    @Column(name = email, nullable = false, unique = true)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = languages, nullable = true)
+    @Column(name = "languages", nullable = true)
     private String languages;
 
-    @Column(name = signature, nullable = true)
+    @Column(name = "signature", nullable = true)
     private byte signature;
 
     public Admin() {
     }
 
-    public Admin(String firstName, String lastName, String passWord, byte avatar,Int phoneNumCountryCode,
-                 Int phoneNum, Int trustedPhone,String email, String languages, byte signature){
+    public Admin(String firstName, String lastName, String passWord, byte avatar,int phoneNumCountryCode,
+                 int phoneNum, int trustedPhone,String email, String languages, byte signature){
         this.firstName = firstName;
         this.lastName = lastName;
         this.passWord = passWord;
@@ -62,11 +60,11 @@ public class Admin {
     }
 
     public Long getId() {
-        return id;
+        return admin_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.admin_id = admin_id;
     }
 
     public String firstName() {
@@ -101,27 +99,27 @@ public class Admin {
         this.avatar = avatar;
     }
 
-    public Int phoneNumCountryCode() {
+    public int phoneNumCountryCode() {
         return phoneNumCountryCode;
     }
 
-    public void setphoneNumCountryCode(Int phoneNumCountryCode) {
+    public void setphoneNumCountryCode(int phoneNumCountryCode) {
         this.phoneNumCountryCode = phoneNumCountryCode;
     }
 
-    public Int phoneNum() {
+    public int phoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(Int phoneNum) {
+    public void setPhoneNum(int phoneNum) {
         this.phoneNum = phoneNum;
     }
 
-    public Int trustedPhone() {
+    public int trustedPhone() {
         return trustedPhone;
     }
 
-    public void setTrustedPhone(Int trustedPhone) {
+    public void setTrustedPhone(int trustedPhone) {
         this.trustedPhone = trustedPhone;
     }
 

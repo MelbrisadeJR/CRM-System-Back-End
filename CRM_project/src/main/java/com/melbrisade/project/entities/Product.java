@@ -1,8 +1,9 @@
 package com.melbrisade.project.entities;
 
-import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -20,16 +21,16 @@ public class Product{
     @Column(name = "stock", nullable = false)
     private int stock;
 
-    @Column(name = "discounts", nullable = true)
+    @Column(name = "discounts", nullable = true, precision=2, scale=0)
     private float discounts;
 
     @Column(name = "SKU", nullable = false)
     private int SKU;
 
-    @Column(name = "product_price", nullable = false)
+    @Column(name = "product_price", nullable = false, precision=2, scale=0)
     private float product_price;
 
-    @Column(name = "product_cost", nullable = false)
+    @Column(name = "product_cost", nullable = false, precision=2, scale=0)
     private float product_cost;
 
     @Column(name = "category", nullable = true)

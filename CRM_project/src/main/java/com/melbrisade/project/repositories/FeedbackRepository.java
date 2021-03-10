@@ -1,12 +1,14 @@
 package com.melbrisade.project.repositories;
 
 import com.melbrisade.project.entities.Feedback;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface FeedbackRepository extends CrudRepository<Feedback, Long> {
+import java.util.List;
+
+public interface FeedbackRepository extends JpaRepository<Feedback, Long> {
 
     Feedback findFeedbackById(long id);
 
     @Override
-    Iterable<Feedback> findAll();
+    List<Feedback> findAll();
 }

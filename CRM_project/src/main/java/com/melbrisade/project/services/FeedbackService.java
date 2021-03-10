@@ -24,7 +24,7 @@ public class FeedbackService {
         return feedbackRepository.findAll();
     }
 
-    public void deleteProjectById(long feedback_id) {
+    public void deleteFeedbackById(long feedback_id) {
         Feedback feedback = feedbackRepository.findFeedbackById(feedback_id);
 
         if (feedback == null) {

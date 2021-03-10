@@ -46,7 +46,7 @@ public class FeedbackController {
 
     @DeleteMapping ("/{feedback_id}")
     public ResponseEntity<?> deleteFeedbackById(@PathVariable long feedback_id) {
-        feedbackService.deleteProjectById(feedback_id);
+        feedbackService.deleteFeedbackById(feedback_id);
         return new ResponseEntity<String>("Feedback with ID: "+ feedback_id + "was deleted", HttpStatus.OK);
     }
 

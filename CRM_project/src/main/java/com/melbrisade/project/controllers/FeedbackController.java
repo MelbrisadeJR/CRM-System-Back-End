@@ -1,4 +1,4 @@
-package com.melbrisade.project.controller;
+package com.melbrisade.project.controllers;
 
 import com.melbrisade.project.entities.Feedback;
 import com.melbrisade.project.services.FeedbackService;

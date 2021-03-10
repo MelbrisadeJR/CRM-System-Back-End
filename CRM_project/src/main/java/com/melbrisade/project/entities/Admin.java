@@ -2,8 +2,9 @@ package com.melbrisade.project.entities;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-@Table(name = "admin"）
 public class Admin {
 
     @Id
@@ -44,11 +45,10 @@ public class Admin {
     private byte signature;
 
     public Admin() {
-    } 
+    }
 
-    public Admin（String firstName, String lastName, String passWord, byte avatar，
-    Int phoneNumCountryCode，Int phoneNum, Int trustedPhone, String email,
-    String languages, byte signature）{
+    public Admin(String firstName, String lastName, String passWord, byte avatar,Int phoneNumCountryCode,
+                 Int phoneNum, Int trustedPhone,String email, String languages, byte signature){
         this.firstName = firstName;
         this.lastName = lastName;
         this.passWord = passWord;
@@ -97,7 +97,7 @@ public class Admin {
         return avatar;
     }
 
-    public void setAvatar(Byte avatar) {
+    public void setAvatar(byte avatar) {
         this.avatar = avatar;
     }
 
@@ -141,11 +141,11 @@ public class Admin {
         this.languages = languages;
     }
 
-    public Byte signature() {
+    public byte signature() {
         return signature;
     }
 
-    public vodi setSignature(Byte signature) {
+    public void setSignature(byte signature) {
         this.signature = signature;
     }
 }

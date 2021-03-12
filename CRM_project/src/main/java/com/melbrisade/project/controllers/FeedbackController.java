@@ -33,21 +33,25 @@ public class FeedbackController {
         return new ResponseEntity<>(feedback, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{feedback_id}")
-    public ResponseEntity<?> getFeedbackById(@PathVariable long feedback_id) {
-        Feedback feedback = feedbackService.findFeedbackById(feedback_id);
+
+
+    @GetMapping("/{feedback_seq}")
+    public ResponseEntity<?> getFeedbackById(@PathVariable String feedback_seq) {
+        Feedback feedback = feedbackService.findFeedbackById(feedback_seq);
         return new ResponseEntity<Feedback>(feedback, HttpStatus.OK);
     }
 
     @GetMapping("/all")
-    public Iterable<Feedback> getAllFeedbacks() {
+    public Iterable<Feedback> findAll() {
         return feedbackService.findAllFeedbacks();
     }
 
-    @DeleteMapping ("/{feedback_id}")
-    public ResponseEntity<?> deleteFeedbackById(@PathVariable long feedback_id) {
-        feedbackService.deleteFeedbackById(feedback_id);
-        return new ResponseEntity<String>("Feedback with ID: "+ feedback_id + "was deleted", HttpStatus.OK);
+
+    @DeleteMapping ("/{feedback_seq}")
+    public ResponseEntity<?> deleteFeedbackById(@PathVariable String feedback_seq) {
+        feedbackService.deleteFeedbackById(feedback_seq);
+
+        return new ResponseEntity<String>("Feedback with ID: "+ feedback_seq + " was deleted", HttpStatus.OK);
     }
 
 

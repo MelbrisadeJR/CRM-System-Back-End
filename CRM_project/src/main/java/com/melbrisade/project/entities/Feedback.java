@@ -18,8 +18,9 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(updatable = false)
-    private String feedbackSequence;
+    @NotBlank(message = "Feedback Sequence Required")
+    @Column(updatable = false, unique = true)
+    private String feedbackSequenceNum;
 
     @NotBlank(message = "Description Required")
     private String description;
@@ -52,10 +53,10 @@ public class Feedback {
     public String toString() {
         return "Feedback{" +
                 "id=" + id +
-                ", feedbackSequence='" + feedbackSequence + '\'' +
+                ", feedbackSequenceNum='" + feedbackSequenceNum + '\'' +
                 ", description='" + description + '\'' +
                 ", feedback_status='" + feedback_status + '\'' +
-                ", priority='" + priority + '\'' +
+                ", priority=" + priority +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';
@@ -69,12 +70,12 @@ public class Feedback {
         this.id = id;
     }
 
-    public String getFeedbackSequence() {
-        return feedbackSequence;
+    public String getFeedbackSequenceNum() {
+        return feedbackSequenceNum;
     }
 
-    public void setFeedbackSequence(String feedbackSequence) {
-        this.feedbackSequence = feedbackSequence;
+    public void setFeedbackSequenceNum(String feedbackSequenceNum) {
+        this.feedbackSequenceNum = feedbackSequenceNum;
     }
 
     public String getDescription() {

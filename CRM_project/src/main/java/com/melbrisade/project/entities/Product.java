@@ -2,6 +2,7 @@ package com.melbrisade.project.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import javax.validation.constraints.NotBlank;
 
 import javax.persistence.*;
 
@@ -59,11 +60,11 @@ public Product(String product_name, int stock,  float discounts, int SKU, float 
     this.image = image;
 }
 
-public Long getProduct_id(){
+public Long getId(){
     return product_id;
 }
 
-public void setProduct_id(Long product_id){
+public void setId(Long product_id){
     this.product_id = product_id;
 }
 

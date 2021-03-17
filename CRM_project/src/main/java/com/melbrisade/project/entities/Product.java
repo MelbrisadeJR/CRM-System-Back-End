@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -41,6 +43,10 @@ public class Product{
 
     @Column(name = "image", nullable = true)
     private byte image;
+
+    // OneToMany relationship
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "product")
+    private List<Feedback> feedbacks = new ArrayList<>();
 
     public Product() {
     }

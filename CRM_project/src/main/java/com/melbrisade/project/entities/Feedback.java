@@ -2,6 +2,7 @@ package com.melbrisade.project.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,9 +33,13 @@ public class Feedback {
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date update_At;
 
-    // Map Customer Required
-    // Map Order Required
-    // Map Product Required
+    // Map Customer Required (ManyToOne)
+    // Map Order Required (ManyToOne)
+    // Map Product Required (ManyToOne)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "productID", updatable = false, nullable = false)
+    @JsonIgnore
+    private Product product;
 
     public Feedback() {
     }

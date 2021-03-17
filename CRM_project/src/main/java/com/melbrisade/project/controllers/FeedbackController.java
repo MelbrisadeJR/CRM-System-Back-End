@@ -30,7 +30,7 @@ public class FeedbackController {
         }
 
         Feedback feedbackToCreate = feedbackService.saveOrUpdateFeedback(feedback);
-        return new ResponseEntity<>(feedback, HttpStatus.CREATED);
+        return new ResponseEntity<>(feedbackToCreate, HttpStatus.CREATED);
     }
 
 

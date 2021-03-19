@@ -9,6 +9,8 @@ public class CustomerPostDto {
 
     private String lastName;
 
+    private String password;
+
     private String mobile;
 
     private int gender;

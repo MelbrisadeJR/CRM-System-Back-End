@@ -13,6 +13,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/feedback")
+@CrossOrigin
 public class FeedbackController {
 
     @Autowired

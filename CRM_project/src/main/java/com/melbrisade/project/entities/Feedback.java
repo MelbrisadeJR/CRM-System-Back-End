@@ -2,7 +2,6 @@ package com.melbrisade.project.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -36,10 +35,10 @@ public class Feedback {
     // Map Customer Required (ManyToOne)
     // Map Order Required (ManyToOne)
     // Map Product Required (ManyToOne)
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "productID", updatable = false, nullable = false)
-    @JsonIgnore
-    private Product product;
+//    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+//    @JoinColumn(name = "productID", updatable = false, nullable = false)
+//    @JsonIgnore
+//    private Product product;
 
     public Feedback() {
     }

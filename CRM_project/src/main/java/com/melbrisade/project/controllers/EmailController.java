@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/emails")
 @RequiredArgsConstructor
+@CrossOrigin
 public class EmailController {
     private final EmailService emailService;
 

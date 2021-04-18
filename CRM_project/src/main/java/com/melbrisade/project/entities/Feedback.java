@@ -2,17 +2,14 @@ package com.melbrisade.project.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
-@Getter
-@Setter
 public class Feedback {
 
     @Id
@@ -28,18 +25,22 @@ public class Feedback {
     private String feedback_status;
     private Integer priority;
 
-    @JsonFormat(pattern = "yyyy-mm-dd")
+    @CreatedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    @Column(updatable = false)
     private Date create_At;
-    @JsonFormat(pattern = "yyyy-mm-dd")
+
+    @LastModifiedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date update_At;
 
     // Map Customer Required (ManyToOne)
     // Map Order Required (ManyToOne)
     // Map Product Required (ManyToOne)
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "productID", updatable = false, nullable = false)
-    @JsonIgnore
-    private Product product;
+//    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+//    @JoinColumn(name = "productID", updatable = false, nullable = false)
+//    @JsonIgnore
+//    private Product product;
 
     public Feedback() {
     }
@@ -47,8 +48,9 @@ public class Feedback {
     @PrePersist
     protected void onCreate() {
         this.create_At = new Date();
-    }
 
+    }
+//
     @PreUpdate
     protected void onUpdate() {
         this.update_At = new Date();

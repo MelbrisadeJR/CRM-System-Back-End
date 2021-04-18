@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
@@ -13,7 +11,7 @@ import java.util.List;
 @Table(name="product")
 public class Product{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "productID", nullable = false)
     private Long productID;
 
@@ -45,8 +43,8 @@ public class Product{
     private byte image;
 
     // OneToMany relationship
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "product")
-    private List<Feedback> feedbacks = new ArrayList<>();
+//    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "product")
+//    private List<Feedback> feedbacks = new ArrayList<>();
 
     public Product() {
     }

@@ -7,6 +7,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -16,14 +17,14 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank(message = "Feedback Sequence Required")
-    @Column(updatable = false, unique = true)
-    private String feedbackSequenceNum;
-
     @NotBlank(message = "Description Required")
     private String description;
-    private String feedback_status;
-    private Integer priority;
+    @NotNull(message = "Rating Required")
+    private Float rating;
+
+    private String projectName;
+
+    private String OrderSequence;
 
     @CreatedDate
     @JsonFormat(pattern = "dd/MM/yyyy")
@@ -60,10 +61,10 @@ public class Feedback {
     public String toString() {
         return "Feedback{" +
                 "id=" + id +
-                ", feedbackSequenceNum='" + feedbackSequenceNum + '\'' +
                 ", description='" + description + '\'' +
-                ", feedback_status='" + feedback_status + '\'' +
-                ", priority=" + priority +
+                ", rate=" + rating +
+                ", projectName='" + projectName + '\'' +
+                ", OrderSequence=" + OrderSequence +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';
@@ -77,14 +78,6 @@ public class Feedback {
         this.id = id;
     }
 
-    public String getFeedbackSequenceNum() {
-        return feedbackSequenceNum;
-    }
-
-    public void setFeedbackSequenceNum(String feedbackSequenceNum) {
-        this.feedbackSequenceNum = feedbackSequenceNum;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -93,20 +86,12 @@ public class Feedback {
         this.description = description;
     }
 
-    public String getFeedback_status() {
-        return feedback_status;
+    public Float getRating() {
+        return rating;
     }
 
-    public void setFeedback_status(String feedback_status) {
-        this.feedback_status = feedback_status;
-    }
-
-    public Integer getPriority() {
-        return priority;
-    }
-
-    public void setPriority(Integer priority) {
-        this.priority = priority;
+    public void setRating(Float rating) {
+        this.rating = rating;
     }
 
     public Date getCreate_At() {
@@ -123,5 +108,21 @@ public class Feedback {
 
     public void setUpdate_At(Date update_At) {
         this.update_At = update_At;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getOrderSequence() {
+        return OrderSequence;
+    }
+
+    public void setOrderSequence(String orderSequence) {
+        OrderSequence = orderSequence;
     }
 }

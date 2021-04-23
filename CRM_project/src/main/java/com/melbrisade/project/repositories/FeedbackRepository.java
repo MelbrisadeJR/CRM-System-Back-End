@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FeedbackRepository extends CrudRepository<Feedback, Long> {
 
-    Feedback findFeedbackByFeedbackSequenceNum(String seqNum);
+    Feedback findFeedbackById(Long id);
 
 }

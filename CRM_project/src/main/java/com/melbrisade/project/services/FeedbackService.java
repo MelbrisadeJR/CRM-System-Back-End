@@ -16,19 +16,19 @@ public class FeedbackService {
         return feedbackRepository.save(feedback);
     }
 
-    public Feedback findFeedbackById(long feedback_id) {
-        return feedbackRepository.findFeedbackById(feedback_id);
+    public Feedback findFeedbackById(Long id) {
+        return feedbackRepository.findFeedbackById(id);
     }
 
     public Iterable<Feedback> findAllFeedbacks() {
         return feedbackRepository.findAll();
     }
 
-    public void deleteFeedbackById(long feedback_id) {
-        Feedback feedback = feedbackRepository.findFeedbackById(feedback_id);
+    public void deleteFeedbackById(Long id) {
+        Feedback feedback = feedbackRepository.findFeedbackById(id);
 
         if (feedback == null) {
-            throw new FeedbackException("Cannot delete with ID" + feedback_id + ". This feedback does not exist");
+            throw new FeedbackException("Cannot delete with ID" + id + ". This feedback does not exist");
         }
         feedbackRepository.delete(feedback);
     }

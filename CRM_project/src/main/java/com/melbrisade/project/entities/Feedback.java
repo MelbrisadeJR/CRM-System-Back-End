@@ -2,38 +2,46 @@ package com.melbrisade.project.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
-@Getter
-@Setter
 public class Feedback {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(updatable = false)
-    private String feedbackSequence;
-
     @NotBlank(message = "Description Required")
     private String description;
-    private String feedback_status;
-    private Integer priority;
+    @NotNull(message = "Rating Required")
+    private Float rating;
 
-    @JsonFormat(pattern = "yyyy-mm-dd")
+    private String projectName;
+
+    private String OrderSequence;
+
+    @CreatedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    @Column(updatable = false)
     private Date create_At;
-    @JsonFormat(pattern = "yyyy-mm-dd")
+
+    @LastModifiedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date update_At;
 
-    // Map Customer Required
-    // Map Order Required
-    // Map Product Required
+    // Map Customer Required (ManyToOne)
+    // Map Order Required (ManyToOne)
+    // Map Product Required (ManyToOne)
+//    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+//    @JoinColumn(name = "productID", updatable = false, nullable = false)
+//    @JsonIgnore
+//    private Product product;
 
     public Feedback() {
     }
@@ -41,8 +49,9 @@ public class Feedback {
     @PrePersist
     protected void onCreate() {
         this.create_At = new Date();
-    }
 
+    }
+//
     @PreUpdate
     protected void onUpdate() {
         this.update_At = new Date();
@@ -52,10 +61,10 @@ public class Feedback {
     public String toString() {
         return "Feedback{" +
                 "id=" + id +
-                ", feedbackSequence='" + feedbackSequence + '\'' +
                 ", description='" + description + '\'' +
-                ", feedback_status='" + feedback_status + '\'' +
-                ", priority='" + priority + '\'' +
+                ", rate=" + rating +
+                ", projectName='" + projectName + '\'' +
+                ", OrderSequence=" + OrderSequence +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';
@@ -69,14 +78,6 @@ public class Feedback {
         this.id = id;
     }
 
-    public String getFeedbackSequence() {
-        return feedbackSequence;
-    }
-
-    public void setFeedbackSequence(String feedbackSequence) {
-        this.feedbackSequence = feedbackSequence;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -85,20 +86,12 @@ public class Feedback {
         this.description = description;
     }
 
-    public String getFeedback_status() {
-        return feedback_status;
+    public Float getRating() {
+        return rating;
     }
 
-    public void setFeedback_status(String feedback_status) {
-        this.feedback_status = feedback_status;
-    }
-
-    public Integer getPriority() {
-        return priority;
-    }
-
-    public void setPriority(Integer priority) {
-        this.priority = priority;
+    public void setRating(Float rating) {
+        this.rating = rating;
     }
 
     public Date getCreate_At() {
@@ -115,5 +108,21 @@ public class Feedback {
 
     public void setUpdate_At(Date update_At) {
         this.update_At = update_At;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getOrderSequence() {
+        return OrderSequence;
+    }
+
+    public void setOrderSequence(String orderSequence) {
+        OrderSequence = orderSequence;
     }
 }

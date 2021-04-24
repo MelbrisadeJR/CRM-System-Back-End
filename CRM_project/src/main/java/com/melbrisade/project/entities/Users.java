@@ -1,5 +1,9 @@
 package com.melbrisade.project.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -10,29 +14,37 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-public class User implements UserDetails {
+public class Users implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="userid")
     private Long id;
 
-    @Email(message = "Please use your email as username")
-    @NotBlank(message = "Username is required")
-    @Column(unique = true)
+    @Email(message = "Please enter a valid email")
+    @NotBlank(message = "Email is required")
+    @Column(name="email")
+    private String email;
+
+    @NotBlank(message = "Username is require")
+    @Column(name = "username" ,unique = true)
     private String username;
 
-    @NotBlank(message = "Fullname is require")
-    private String fullname;
-
     @NotBlank(message = "Password filed is required")
+    @Column(name="password")
     private String password;
 
     @Transient
     private String confirmPassword;
+    @CreatedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    @Column(updatable = false)
     private Date create_At;
+    @LastModifiedDate
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date update_At;
 
-    public User() {
+    public Users() {
     }
 
     @PrePersist
@@ -45,27 +57,36 @@ public class User implements UserDetails {
         this.update_At = new Date();
     }
 
+    /*
+    UserDetails interface methods
+    */
+
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isEnabled() {
         return true;
     }
@@ -78,7 +99,14 @@ public class User implements UserDetails {
         this.id = id;
     }
 
-    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -87,15 +115,6 @@ public class User implements UserDetails {
         this.username = username;
     }
 
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    @Override
     public String getPassword() {
         return password;
     }
@@ -126,5 +145,18 @@ public class User implements UserDetails {
 
     public void setUpdate_At(Date update_At) {
         this.update_At = update_At;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                ", create_At=" + create_At +
+                ", update_At=" + update_At +
+                '}';
     }
 }

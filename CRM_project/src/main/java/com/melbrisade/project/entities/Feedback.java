@@ -20,9 +20,10 @@ public class Feedback {
     @NotBlank(message = "Description Required")
     private String description;
     @NotNull(message = "Rating Required")
+    @Column(scale = 1)
     private Float rating;
 
-    private String projectName;
+    private String productName;
 
     private String OrderSequence;
 
@@ -63,7 +64,7 @@ public class Feedback {
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", rate=" + rating +
-                ", projectName='" + projectName + '\'' +
+                ", projectName='" + productName + '\'' +
                 ", OrderSequence=" + OrderSequence +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
@@ -110,12 +111,12 @@ public class Feedback {
         this.update_At = update_At;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setProductName(String projectName) {
+        this.productName = projectName;
     }
 
     public String getOrderSequence() {

@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e89f886-a513-485e-85a7-56fd7c9bcef4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4739af4f-704e-42e2-ab48-3872b5b91c2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/common/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/MailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/entities/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/MailExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/ServiceAccessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/impl/MailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/resources/templates/verificationCode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +37,35 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qxHiplmo12ORAo2yzbh18s5uft" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,5 +87,17 @@
       <workItem from="1618014452635" duration="11000" />
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

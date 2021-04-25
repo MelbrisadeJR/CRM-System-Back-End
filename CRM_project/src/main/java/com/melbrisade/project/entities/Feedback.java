@@ -25,7 +25,7 @@ public class Feedback {
 
     private String productName;
 
-    private String OrderSequence;
+    private String OrderRef;
 
     @CreatedDate
     @JsonFormat(pattern = "dd/MM/yyyy")
@@ -65,7 +65,7 @@ public class Feedback {
                 ", description='" + description + '\'' +
                 ", rate=" + rating +
                 ", projectName='" + productName + '\'' +
-                ", OrderSequence=" + OrderSequence +
+                ", OrderSequence=" + OrderRef +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';
@@ -119,11 +119,11 @@ public class Feedback {
         this.productName = projectName;
     }
 
-    public String getOrderSequence() {
-        return OrderSequence;
+    public String getOrderRef() {
+        return OrderRef;
     }
 
-    public void setOrderSequence(String orderSequence) {
-        OrderSequence = orderSequence;
+    public void setOrderRef(String orderRef) {
+        OrderRef = orderRef;
     }
 }

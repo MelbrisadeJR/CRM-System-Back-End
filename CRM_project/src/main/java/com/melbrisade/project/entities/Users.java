@@ -14,6 +14,7 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
+@Table(name="users")
 public class Users implements UserDetails {
 
     @Id
@@ -33,6 +34,9 @@ public class Users implements UserDetails {
     @NotBlank(message = "Password filed is required")
     @Column(name="password")
     private String password;
+
+    @Column(name="is_email_verified", columnDefinition="boolean default false")
+    private boolean isEmailVerified;
 
     @Transient
     private String confirmPassword;
@@ -147,6 +151,15 @@ public class Users implements UserDetails {
         this.update_At = update_At;
     }
 
+    @JsonIgnore
+    public boolean isEmailVerified() {
+        return isEmailVerified;
+    }
+
+    public void setEmailVerified(boolean emailVerified) {
+        this.isEmailVerified = emailVerified;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -155,6 +168,7 @@ public class Users implements UserDetails {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +
+                ", isEmailVerified='" + isEmailVerified + '\'' +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';

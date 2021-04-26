@@ -1,6 +1,6 @@
 package com.melbrisade.project.exceptions;
 
-import com.melbrisade.common.ApiResponse;
+import com.melbrisade.project.payload.ApiResponse;
 import lombok.Data;
 
 @Data

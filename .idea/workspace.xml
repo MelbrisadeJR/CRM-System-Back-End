@@ -5,24 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4739af4f-704e-42e2-ab48-3872b5b91c2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/common/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/MailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/entities/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/MailExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/ServiceAccessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/impl/MailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/resources/templates/verificationCode.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/entities/EmailVerifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/payload/TaskPoolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/repositories/impl/EmailRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM_project/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/payload/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/MailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/MailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/dtos/EmailGetDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/dtos/EmailPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/entities/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/ServiceAccessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/exceptions/ServiceAccessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/repositories/EmailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/repositories/EmailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/security/SecurityConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/security/SecurityConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/impl/MailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/java/com/melbrisade/project/services/impl/MailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM_project/src/main/resources/templates/verificationCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/CRM_project/src/main/resources/templates/verificationCode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Danni_Flyway_Config/.gradle/checksums/checksums.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/CRM_project">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -59,6 +69,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -73,9 +90,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CrmProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.melbrisade.project.CrmProjectApplication" />
+      <module name="demo.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.melbrisade.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CrmProjectApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +132,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/lily_dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

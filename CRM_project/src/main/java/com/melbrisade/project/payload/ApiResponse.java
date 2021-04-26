@@ -1,4 +1,4 @@
-package com.melbrisade.common;
+package com.melbrisade.project.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

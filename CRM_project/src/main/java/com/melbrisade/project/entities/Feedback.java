@@ -20,11 +20,12 @@ public class Feedback {
     @NotBlank(message = "Description Required")
     private String description;
     @NotNull(message = "Rating Required")
+    @Column(scale = 1)
     private Float rating;
 
-    private String projectName;
+    private String productName;
 
-    private String OrderSequence;
+    private String OrderRef;
 
     @CreatedDate
     @JsonFormat(pattern = "dd/MM/yyyy")
@@ -63,8 +64,8 @@ public class Feedback {
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", rate=" + rating +
-                ", projectName='" + projectName + '\'' +
-                ", OrderSequence=" + OrderSequence +
+                ", projectName='" + productName + '\'' +
+                ", OrderSequence=" + OrderRef +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 '}';
@@ -110,19 +111,19 @@ public class Feedback {
         this.update_At = update_At;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setProductName(String projectName) {
+        this.productName = projectName;
     }
 
-    public String getOrderSequence() {
-        return OrderSequence;
+    public String getOrderRef() {
+        return OrderRef;
     }
 
-    public void setOrderSequence(String orderSequence) {
-        OrderSequence = orderSequence;
+    public void setOrderRef(String orderRef) {
+        OrderRef = orderRef;
     }
 }

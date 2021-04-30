@@ -49,17 +49,6 @@ public class Product{
     public Product() {
     }
 
-//    public Product(String productName, int stock, float discounts, int SKU, float product_price, float product_cost, String category, String manufacture, byte image){
-//        this.productName = productName;
-//        this.stock = stock;
-//        this.discounts = discounts;
-//        this.SKU = SKU;
-//        this.product_price = product_price;
-//        this.product_cost = product_cost;
-//        this.category = category;
-//        this.manufacture = manufacture;
-//        this.image = image;
-//    }
 
     public Long getId(){
         return productID;

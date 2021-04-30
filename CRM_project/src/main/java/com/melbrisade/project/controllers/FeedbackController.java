@@ -54,7 +54,7 @@ public class FeedbackController {
         return new ResponseEntity<String>("Feedback with ID: "+ feedback_id+ " was deleted", HttpStatus.OK);
     }
 
-    @DeleteMapping("/{feedback_ids}")
+    @DeleteMapping("/feedbacks/{feedback_ids}")
     public ResponseEntity<?> deleteMultipleFeedbacks(@PathVariable List<Long> feedback_ids) {
         for (long id : feedback_ids) {
             if (feedbackService.findFeedbackById(id) != null) {

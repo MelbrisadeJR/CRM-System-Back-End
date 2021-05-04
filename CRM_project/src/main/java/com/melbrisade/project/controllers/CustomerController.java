@@ -5,6 +5,7 @@ import com.melbrisade.project.dtos.CustomerPostDto;
 import com.melbrisade.project.entities.Customer;
 import com.melbrisade.project.services.CustomerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,9 +32,19 @@ public class CustomerController {
     }
 
     @DeleteMapping("/{customerId}")
-    public ResponseEntity delete(@PathVariable Long customerId){
-        customerService.delete(customerId);
+    public ResponseEntity deleteCustomerById(@PathVariable Long customerId){
+        customerService.deleteCustomerById(customerId);
         return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/{customerIds}")
+    public ResponseEntity<?> deleteMultipleCustomers(@PathVariable List<Long> customerIds) {
+        for (long id : customerIds) {
+            if (customerService.findCustomerById(id) != null) {
+                customerService.fakeDeleteCustomerById(id);
+            }
+        }
+        return new ResponseEntity<String>("Multiple customers were deleted", HttpStatus.OK);
     }
 
     @GetMapping("/{customerId}")

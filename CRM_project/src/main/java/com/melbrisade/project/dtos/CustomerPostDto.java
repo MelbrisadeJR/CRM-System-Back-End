@@ -2,6 +2,8 @@ package com.melbrisade.project.dtos;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class CustomerPostDto {
 
@@ -13,7 +15,7 @@ public class CustomerPostDto {
 
     private String mobile;
 
-    private int gender;
+    private String gender;
 
     private String email;
 
@@ -27,7 +29,9 @@ public class CustomerPostDto {
 
     private String country;
 
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
     private int tag;
+
+    private Date createAt;
 }

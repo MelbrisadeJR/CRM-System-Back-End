@@ -1,8 +1,12 @@
 package com.melbrisade.project.dtos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Column;
+import java.util.Date;
 
 @Data
 public class CustomerGetDto {
@@ -14,7 +18,7 @@ public class CustomerGetDto {
 
     private String mobile;
 
-    private int gender;
+    private String gender;
 
     private String email;
 
@@ -28,7 +32,12 @@ public class CustomerGetDto {
 
     private String country;
 
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
     private int tag;
+
+    private Date createAt;
+    private Date updateAt;
+
+    private boolean deleted;
 }

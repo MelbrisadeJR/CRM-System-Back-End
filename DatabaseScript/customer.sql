@@ -5,7 +5,7 @@ CREATE TABLE customer(
 	last_name VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL,
 	mobile INT NOT NULL,
-	gender INT NOT NULL,
+	gender VARCHAR(255) NULL,
 	email VARCHAR(255) NOT NULL,
 	address_line1 VARCHAR(255) NOT NULL,
 	address_line2 VARCHAR(255),

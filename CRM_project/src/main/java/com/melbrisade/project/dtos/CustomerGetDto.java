@@ -39,5 +39,4 @@ public class CustomerGetDto {
     private Date createAt;
     private Date updateAt;
 
-    private boolean deleted;
 }

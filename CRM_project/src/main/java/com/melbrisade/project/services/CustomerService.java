@@ -9,6 +9,7 @@ import com.melbrisade.project.mappers.CustomerMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -31,12 +32,20 @@ public class CustomerService {
         customerEntity.setDeleted(true);
         customerRepository.save(customerEntity);
     }
+
+    public CustomerGetDto updateCustomerById(Long customerId, CustomerPutDto customerPutDto){
+        Customer customer = customerRepository.getOne(customerId);
+        customerMapper.copy(customerPutDto, customer);
+        return customerMapper.fromEntity(customerRepository.save(customer));
+    }
     //get customer list
     public List<Customer> getAllCustomers() {
         List<Customer> customerList = customerRepository.findAll();
-        for (Customer customer : customerList){
-            if (customer.isDeleted() == true ){
-                customerList.remove(customer);
+        Iterator<Customer> itr = customerList.iterator();
+        while(itr.hasNext()){
+            Customer customer = itr.next();
+            if (customer.isDeleted()){
+                itr.remove();
             }
         }
         return customerList;

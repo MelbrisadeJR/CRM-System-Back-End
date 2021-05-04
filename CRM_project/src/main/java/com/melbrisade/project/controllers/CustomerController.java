@@ -2,6 +2,7 @@ package com.melbrisade.project.controllers;
 
 import com.melbrisade.project.dtos.CustomerGetDto;
 import com.melbrisade.project.dtos.CustomerPostDto;
+import com.melbrisade.project.dtos.CustomerPutDto;
 import com.melbrisade.project.entities.Customer;
 import com.melbrisade.project.services.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,8 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin
 @RequiredArgsConstructor
+@CrossOrigin
 @RequestMapping("/api/customers")
 public class CustomerController {
     private final CustomerService customerService;
@@ -45,6 +46,13 @@ public class CustomerController {
             }
         }
         return new ResponseEntity<String>("Multiple customers were deleted", HttpStatus.OK);
+    }
+
+    @PutMapping("/{customerId}")
+    public ResponseEntity<CustomerGetDto> updateCustomers(@PathVariable Long customerId,
+                                             @RequestBody CustomerPutDto customerPutDto) {
+        CustomerGetDto customerGetDto = customerService.updateCustomerById(customerId, customerPutDto);
+        return ResponseEntity.ok(customerGetDto);
     }
 
     @GetMapping("/{customerId}")

@@ -5,6 +5,8 @@ import java.util.Date;
 
 @Data
 public class CustomerPutDto {
+    private Long customerId;
+
     private String firstName;
 
     private String lastName;

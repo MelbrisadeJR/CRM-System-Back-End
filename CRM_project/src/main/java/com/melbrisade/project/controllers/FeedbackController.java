@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/feedback")
@@ -53,6 +54,15 @@ public class FeedbackController {
         return new ResponseEntity<String>("Feedback with ID: "+ feedback_id+ " was deleted", HttpStatus.OK);
     }
 
+    @DeleteMapping("/feedbacks/{feedback_ids}")
+    public ResponseEntity<?> deleteMultipleFeedbacks(@PathVariable List<Long> feedback_ids) {
+        for (long id : feedback_ids) {
+            if (feedbackService.findFeedbackById(id) != null) {
+                feedbackService.deleteFeedbackById(id);
+            }
+        }
+        return new ResponseEntity<String>("Multiple feedbacks were deleted", HttpStatus.OK);
+    }
 
 
 

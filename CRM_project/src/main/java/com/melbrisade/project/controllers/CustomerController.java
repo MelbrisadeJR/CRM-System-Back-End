@@ -48,7 +48,7 @@ public class CustomerController {
         return new ResponseEntity<String>("Multiple customers were deleted", HttpStatus.OK);
     }
 
-    @PutMapping("/{customerId}")
+    @PutMapping("updateById/{customerId}")
     public ResponseEntity<CustomerGetDto> updateCustomers(@PathVariable Long customerId,
                                              @RequestBody CustomerPutDto customerPutDto) {
         CustomerGetDto customerGetDto = customerService.updateCustomerById(customerId, customerPutDto);

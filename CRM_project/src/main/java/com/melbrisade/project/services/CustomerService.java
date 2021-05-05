@@ -35,7 +35,10 @@ public class CustomerService {
 
     public CustomerGetDto updateCustomerById(Long customerId, CustomerPutDto customerPutDto){
         Customer customer = customerRepository.getOne(customerId);
+        System.out.println(customer);
+        System.out.println(customerPutDto);
         customerMapper.copy(customerPutDto, customer);
+        System.out.println(customer);
         return customerMapper.fromEntity(customerRepository.save(customer));
     }
     //get customer list

@@ -26,6 +26,12 @@ public class CustomerController {
         return ResponseEntity.ok(customerList);
     }
 
+    @GetMapping("/totalCustomers")
+    public ResponseEntity<Integer> findTotalCustomers(){
+        List<Customer> customerList = customerService.getAllCustomers();
+        return ResponseEntity.ok(customerList.size());
+    }
+
     @PostMapping
     public ResponseEntity<CustomerGetDto> createCustomer(@RequestBody CustomerPostDto customerPostDto){
         CustomerGetDto customerGetDto = customerService.createCustomer(customerPostDto);
